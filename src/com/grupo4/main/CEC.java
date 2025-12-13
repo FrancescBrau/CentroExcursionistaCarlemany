@@ -1,4 +1,3 @@
-
 package com.grupo4.main;
 
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class CEC {
             opcion = leerEntero();
 
             switch (opcion) {
-                case 1 -> gestionarExpedicionario();      // ya lo tenías
+                case 1 -> gestionarExpedicionario();
                 case 2 -> catalogo.crearMontanaYExcursion(sc);
                 case 3 -> catalogo.listarMontanas();
                 case 4 -> catalogo.listarExcursiones();
@@ -41,7 +40,6 @@ public class CEC {
         } while (opcion != 0);
     }
 
-    // ---------- GESTIÓN EXPEDICIONARIOS (igual que antes, añado búsqueda por ID) ----------
     public void gestionarExpedicionario() {
         int opcion;
         do {
@@ -81,7 +79,7 @@ public class CEC {
 
         Alpinista alpinista = new Alpinista(nombre, id, experiencia, alergias, disponible, rango, cima);
         listaExpedicionarios.add(alpinista);
-        System.out.println("✅ Alpinista añadido.");
+        System.out.println("Alpinista añadido.");
     }
 
     private void crearMedico() {
@@ -102,7 +100,7 @@ public class CEC {
 
         Medico medico = new Medico(nombre, id, experiencia, alergias, disponible, idColegiado, especialista);
         listaExpedicionarios.add(medico);
-        System.out.println("✅ Médico añadido.");
+        System.out.println("Médico añadido.");
     }
 
     private void listarExpedicionarios() {
@@ -116,7 +114,6 @@ public class CEC {
         }
     }
 
-    // ---------- ASIGNACIÓN ----------
     public void asignarExpedicionarioAExcursion() {
         if (listaExpedicionarios.isEmpty()) {
             System.out.println("⚠ No hay expedicionarios. Añade alguno primero.");
@@ -145,9 +142,9 @@ public class CEC {
 
         boolean ok = ex.addExpedicionario(exp);
         if (ok) {
-            System.out.println("✅ Expedicionario asignado a la excursión de " + nombreMontana + ".");
+            System.out.println("Expedicionario asignado a la excursión de " + nombreMontana + ".");
         } else {
-            System.out.println("❌ No se pudo asignar (sin plazas, no disponible o ya está inscrito).");
+            System.out.println("No se pudo asignar (sin plazas, no disponible o ya está inscrito).");
         }
     }
 
@@ -158,7 +155,6 @@ public class CEC {
                 .orElse(null);
     }
 
-    // ---- Lecturas seguras ----
     private int leerEntero() {
         while (true) {
             try {

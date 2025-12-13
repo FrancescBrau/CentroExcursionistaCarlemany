@@ -1,4 +1,3 @@
-
 package com.grupo4.main;
 
 import java.time.LocalDate;
@@ -6,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Excursion {
-    private String lugar;                 // Por defecto, el nombre de la montaña
+    private String lugar;            
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private int plazas;
-    private String dificultad;            // Copiada de la montaña
+    private String dificultad;
     private Montana montana;
     private final List<Expedicionario> expedicionarios;
 
@@ -52,10 +51,6 @@ public class Excursion {
         return new ArrayList<>(expedicionarios);
     }
 
-    /**
-     * Añade un expedicionario si hay plazas disponibles, si no está duplicado y si está disponible.
-     * @return true si se añadió, false en caso contrario
-     */
     public boolean addExpedicionario(Expedicionario e) {
         if (e == null) return false;
         if (!e.isDisponible()) return false;

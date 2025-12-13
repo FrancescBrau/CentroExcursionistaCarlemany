@@ -22,7 +22,6 @@ public class catalogo {
         return new ArrayList<>(excursiones);
     }
 
-    /** Crea montaña y su excursión asociada (mismo nombre) pidiendo datos por consola. */
     public void crearMontanaYExcursion(Scanner sc) {
         System.out.println("\n--- Alta de Montaña (crea excursión automática) ---");
         System.out.print("Nombre de la montaña: ");
@@ -81,7 +80,6 @@ public class catalogo {
                 .orElse(null);
     }
 
-    // ---- Helpers de lectura segura ----
     private int leerEntero(Scanner sc) {
         while (true) {
             try {

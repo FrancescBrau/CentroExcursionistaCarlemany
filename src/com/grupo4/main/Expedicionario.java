@@ -1,4 +1,3 @@
-
 package com.grupo4.main;
 
 public class Expedicionario {
@@ -19,7 +18,7 @@ public class Expedicionario {
     public String getNombreExp() {
         return nombreExp;
     }
-
+    
     public void setNombreExp(String nombreExp) {
         this.nombreExp = nombreExp;
     }
@@ -65,4 +64,5 @@ public class Expedicionario {
                 ", alergias='" + alergias + '\'' +
                 ", disponible=" + disponibilidad +
                 '}';
-       }}
+       }
+    }

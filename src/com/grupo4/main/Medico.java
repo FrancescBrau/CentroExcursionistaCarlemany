@@ -1,4 +1,3 @@
-
 package com.grupo4.main;
 
 public class Medico extends Expedicionario {
